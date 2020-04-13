@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get '/about', to: 'home#about', as: 'about'
 
   devise_for :users, controllers: { registrations: 'users/registrations' }
+
   devise_scope :user do
     get '/users/p/:page' => 'users/registrations#index', as: 'users_with_pagination'
     get 'users', to: 'users/registrations#index', as: 'volunteers'
@@ -31,7 +32,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :offers
+  # resources :offers
 
   scope 'admin' do
     post :delete_user, to: 'admin#delete_user', as: 'delete_user'

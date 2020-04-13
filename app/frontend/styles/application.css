@@ -28,3 +28,8 @@
   -ms-overflow-style: none; /* IE 11 */
   scrollbar-width: none; /* Firefox 64 */
 }
+.nav-logo {
+  max-width: 200px;
+  max-height: 100px;
+  padding: 4px;
+}

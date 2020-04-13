@@ -1,8 +1,12 @@
 <!-- Hero -->
 <div class="bg-white -mt-10 pt-24 ">
   <div class="container mb-4 text-center mb-24">
-    <h1 class="text-2xl sm:text-4xl font-bold tracking-tight leading-tight">Volunteer for COVID-19 projects</h1>
-    <h2 class="sm:text-2xl tracking-tight leading-tight mt-2">We help people find the resources they need.</h2>
+    <h1 class="text-2xl sm:text-4xl font-bold tracking-tight leading-tight">
+      Volunteer for EndCoronavirus.org projects
+    </h1>
+    <h2 class="sm:text-2xl tracking-tight leading-tight mt-2">
+      We help people find the resources they need.
+    </h2>
 
     <div class="relative w-64 mx-auto">
       <%= form_with url: projects_path, local: true, method: :get, html: {'x-ref': 'searchForm'} do |form| %>
@@ -45,18 +49,3 @@
   </div>
 </div>
 
-<!-- Project groups -->
-<div class="container">
-  <% cache @project_groups do %>
-    <%= render partial: 'project-group', collection: @project_groups, as: :group %>
-  <% end %>
-</div>
-
-
-<!-- Upcoming events -->
-<div class="bg-gray-100 shadow-inner">
-  <div class="container pt-10 pb-8 px-4">
-    <div class="text-indigo-600"><%= section_name 'Resources & Events' %></div>
-    <%= render partial: 'partials/events' %>
-  </div>
-</div>

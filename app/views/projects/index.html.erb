@@ -10,16 +10,16 @@
         <p class="mt-1 text-sm leading-5 text-gray-500">
           <%= @projects_subheader %>
           <% if current_user.blank? %>
-            <%= link_to 'Sign up', new_user_registration_path, class: 'text-indigo-500' %> to volunteer.
+            <%= link_to 'Sign up', new_user_registration_path, class: 'text-green-500' %> to volunteer.
           <% elsif !current_user.has_complete_profile? %>
-            <%= link_to 'Fill out your profile', edit_user_registration_path, class: 'text-indigo-500' %> to volunteer.
+            <%= link_to 'Fill out your profile', edit_user_registration_path, class: 'text-green-500' %> to volunteer.
           <% end %>
         </p>
       </div>
       <div class="ml-4 mt-4 flex-shrink-0">
         <span class="inline-flex rounded-md shadow-sm">
           <%= link_to new_project_path do %>
-            <button type="button" class="relative inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:shadow-outline-indigo focus:border-indigo-700 active:bg-indigo-700">
+            <button type="button" class="relative inline-flex items-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-white bg-green-600 hover:bg-green-500 focus:outline-none focus:shadow-outline-green focus:border-green-700 active:bg-green-700">
               Create project
             </button>
           <% end %>
