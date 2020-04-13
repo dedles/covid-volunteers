@@ -85,7 +85,7 @@
               <% ALL_PROJECT_TYPES.each do |project_type| %>
                 <div class="relative flex items-start">
                   <div class="absolute flex items-center h-5">
-                  <%= f.check_box :project_type_list, { multiple: true, class:  "form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out"}, project_type, nil %>
+                  <%= f.check_box :project_type_list, { multiple: true, class:  "form-checkbox h-4 w-4 text-blue-600 transition duration-150 ease-in-out"}, project_type, nil %>
                   </div>
                   <div class="pl-7 text-sm leading-5">
                     <label for="project_project_type_list_<%= project_type.downcase.gsub('&', '__').gsub(' ', '_') %>" class="font-medium text-gray-700">
@@ -114,12 +114,12 @@
           <div class="mt-4 sm:mt-0 sm:col-span-2">
             <div class="max-w-lg">
               <div class="block">
-                <%= f.radio_button :accepting_volunteers, true, checked: @project.new_record? ? true : @project.accepting_volunteers, class: "form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out" %>
+                <%= f.radio_button :accepting_volunteers, true, checked: @project.new_record? ? true : @project.accepting_volunteers, class: "form-radio h-4 w-4 text-blue-600 transition duration-150 ease-in-out" %>
                 <%= f.label :accepting_volunteers, "Yes - Volunteers will be able to apply.", value: "true", class: "pl-2 text-sm text-gray-700"  %>
               </div>
 
               <div class="block">
-                <%= f.radio_button :accepting_volunteers, false, class: "form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out" %>
+                <%= f.radio_button :accepting_volunteers, false, class: "form-radio h-4 w-4 text-blue-600 transition duration-150 ease-in-out" %>
                 <%= f.label :accepting_volunteers, "No - We have all the people and resources we need at the moment.", value: "false", class: "pl-2 text-sm text-gray-700" %>
               </div>
             </div>
@@ -155,7 +155,7 @@
               <% ALL_SKILLS.each do |skill| %>
                 <div class="relative flex items-start">
                   <div class="absolute flex items-center h-5">
-                  <%= f.check_box :skill_list, { multiple: true, class:  "form-checkbox h-4 w-4 text-indigo-600 transition duration-150 ease-in-out"}, skill, nil %>
+                  <%= f.check_box :skill_list, { multiple: true, class:  "form-checkbox h-4 w-4 text-blue-600 transition duration-150 ease-in-out"}, skill, nil %>
                   </div>
                   <div class="pl-7 text-sm leading-5">
                     <label for="project_skill_list_<%= skill.downcase.gsub(' & ', '__').gsub(' ', '_') %>" class="font-medium text-gray-700">
@@ -185,7 +185,7 @@
               <% ALL_NUMBER_OF_VOLUNTEERS.each do |number_of_volunteers| %>
                 <div class="relative flex items-start">
                   <div class="absolute flex items-center h-5">
-                    <%= f.radio_button :number_of_volunteers, number_of_volunteers, { :multiple => false, class:  "form-radio h-4 w-4 text-indigo-600 transition duration-150 ease-in-out"} %>
+                    <%= f.radio_button :number_of_volunteers, number_of_volunteers, { :multiple => false, class:  "form-radio h-4 w-4 text-blue-600 transition duration-150 ease-in-out"} %>
                   </div>
                   <div class="pl-7 text-sm leading-5">
                     <label class="font-medium text-gray-700">

@@ -6,9 +6,9 @@ module ApplicationHelper
   def nav_link_active_class(variant = 'DESKTOP')
     case variant
     when 'DESKTOP'
-      'inline-flex items-center px-1 pt-1 border-b-2 border-indigo-500 text-sm leading-5 text-gray-900 focus:outline-none focus:border-indigo-700 transition duration-150 ease-in-out ml-4 text-center'
+      'inline-flex items-center px-1 pt-1 border-b-2 border-blue-500 text-sm leading-5 text-gray-900 focus:outline-none focus:border-blue-700 transition duration-150 ease-in-out ml-4 text-center'
     when 'MOBILE'
-      'block pl-3 pr-4 py-2 border-l-4 border-indigo-500 text-base text-indigo-700 bg-indigo-50 focus:outline-none focus:text-indigo-800 focus:bg-indigo-100 focus:border-indigo-700 transition duration-150 ease-in-out'
+      'block pl-3 pr-4 py-2 border-l-4 border-blue-500 text-base text-blue-700 bg-blue-50 focus:outline-none focus:text-blue-800 focus:bg-blue-100 focus:border-blue-700 transition duration-150 ease-in-out'
     end
   end
 
@@ -67,7 +67,7 @@ module ApplicationHelper
     if [ 'alert', 'error'].include?(type)
       base_class += ' bg-red-100 border-red-400 text-red-700'
     elsif type == 'notice'
-      base_class += ' bg-green-100 border-green-400 text-green-700'
+      base_class += ' bg-blue-100 border-blue-400 text-blue-700'
     else
       base_class += ' bg-orange-100 border-orange-400 text-orange-700'
     end
@@ -88,8 +88,8 @@ module ApplicationHelper
       classes = 'bg-blue-100 text-blue-800'
       classes += ' bg-blue-300' if applied
     else
-      classes = 'bg-indigo-100 text-indigo-800'
-      classes += ' bg-indigo-300' if applied
+      classes = 'bg-blue-100 text-blue-800'
+      classes += ' bg-blue-300' if applied
     end
 
     render partial: 'partials/filter-badge', locals: {label: label, url: url, classes: classes, title: title}
@@ -135,7 +135,7 @@ module ApplicationHelper
     params_array.reject(&:nil?).join('&')
   end
 
-  def skill_badges(items, limit: nil, color: 'indigo', title: '', model: '', filter_by: '')
+  def skill_badges(items, limit: nil, color: 'blue', title: '', model: '', filter_by: '')
     limit ||= items.count
 
     render partial: 'partials/skill_badges', locals: {color: color, items: items, limit: limit, title: title, model: model, filter_by: filter_by}
